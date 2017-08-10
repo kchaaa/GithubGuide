@@ -151,7 +151,7 @@ $ CRPEs-MacBook-Air:Documents crpe$ rmdir new_directory
 
 #### Headers using '#'
 
-'#' are used to create headers in *Markdown*. If you are familiar with HTML, '#' is the equivalent to <h1>, '##' is the equivalent to <h2>, and so on.
+'#' are used to create headers in *Markdown*. If you are familiar with HTML, '#' is the equivalent to h1, '##' is the equivalent to h2, and so on.
 ```
 # Header 1 [Ignore this in the ToC]
 
