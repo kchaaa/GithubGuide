@@ -17,9 +17,9 @@ setwd("/Users/crpe/Documents/GithubGuide") # MAC
 
 # Introduction to Github and Git
 ### Github
-[Github](https://github.com) is the website that we will use as our central hub/remote repository to store and share all of our code. To use Github, make sure to [create an account](https://github.com/join?source=header-home) unless you already have one.
+[Github](https://github.com) is the website that we will use as our central hub/remote repository to store and share all of our code with each other. To use Github, make sure to [create an account](https://github.com/join?source=header-home) unless you already have one.
 
-Github has allows users to: 
+Github allows users to: 
 
 * Store and back up code
 
@@ -34,7 +34,7 @@ CRPE currently has a [Github Organization](https://github.com/CRPE-UWB) set up t
 ### Git 
 *Git* is a programming language that incorporates new terminal commands used for version control and Github. *Git* commands will be introduced along the way.
 
-**Note:** Whenever I write in *Command Line/Git*, the line that starts with "$" is the input, and the line with ">" is the output. Quotes/`""` around an output means that the output is a description of what will actually happen even if it isn't shown on the Terminal.
+**Note:** Whenever I write in *Command Line/Git*, the line that starts with "$" is the input, and the line with ">" is the output. Quotes/`""` around an output means that the output is a description of what will actually happen even if it isn't shown on the Terminal visually.
 
 Example:
 ```
@@ -56,7 +56,7 @@ I recommend PC Users to use Git's Git Bash.
 
 #### For Markdown
 
-You can use any text editor to write in Markdown and any programming languages actually.
+You can use any text editor to write in Markdown (and any programming languages actually.)
 
 MAC's default text editor is TextEdit. PC's default text editor is Notepad.
 
@@ -81,7 +81,7 @@ Prompt: after the $ to enter commands
 ```
 <br><br>
 
-Here are some common Command Line Commands that will be useful:
+Here are some common *Command Line* commands that will be useful:
 
 **pwd**: Prints Working Directory-tells which directory you are in
 ```
@@ -98,7 +98,8 @@ Desktop		    Downloads  	Movies		Pictures
 ```
 <br><br>
 **cd**: Change Directory-changes the directory
-This function is the equivalent of changing folders/directories in the GUI. For example, imagine accessing a folder (github_ex) that's inside Documents
+
+This function is the equivalent of changing folders/directories in the GUI. For example, imagine accessing a folder (Github_Ex) that's inside Documents
 Assuming your default is the User account you are currently in:
 
 In order to go to a different directory from your current directory, type the name of the directory you want to go to after **cd**.
@@ -129,6 +130,7 @@ $ CRPEs-MacBook-Air:Github_Ex crpe$ cd ../..
 ```
 <br><br>
 **mkdir**: MaKe DIRectory-makes a new directory/folder
+
 When you create a new directory, you won't automatically change your directory. Use **cd** to change to the new directory.
 ```
 $ CRPEs-MacBook-Air:Documents crpe$ mkdir new_directory
@@ -191,7 +193,7 @@ When you surround a word/words with certain characters, it can make them into *i
 
 `**bold**` => **bold**
 
-'~~'/double tildes surrounding a word/(s) = 
+'~~'/double tildes surrounding a word/words = 
 
 `~~strikethrough~~` => ~~strikethrough~~
 <br><br>
@@ -240,16 +242,18 @@ To create a link, you just need to put the URL in `< >`. For example, here is a 
 
 You can create a reference style link as well by putting the text in `[ ]` and the link in `( )` right next to the brackets (but no space between the `[ ]` and the `( )`.) For exmaple, here is a link to `[CRPE's website](http://crpe.org/)` or [CRPE's website](http://crpe.org/).
 
-To insert an image, you just need to put `![ ]( )` The bracket/`[ ]` can be either left empty or you can write a message that will appear when you hover over the image. Similar as a link, you will insert the link to the image in the `( )`. The link to the image can either be an URL or the pathway to the image in your local machine.
+To insert an image, you just need to put `![ ]( )` The bracket or `[ ]` can either be left empty or you can write a message that will appear as a caption for the image. Similar as a link, you will insert the link to the image in the `( )`. The link to the image can either be an URL or the pathway to the image in your local machine.
 <br><br>
 
 #### Code Blocks
 
 One of the greatest benefits of writing in *Markdown* is that you are able to insert code in your report/documentation. You can use back-ticks or '`' to write in code.
 
-'`' or a single back-tick surrounding a word/words allows us to write 1 line of code.
+'`' or a single back-tick surrounding a word/words allows us to write one line of code.
 
 '```' or three back-ticks surrounding a word/words allows us to write multiple lines of code or a code block.
+
+Code Blocks aren't limited to what your code looks like. You can also include visualizations (ex Tables, Graphs, Charts, Interactive Maps, etc.) that were a result of some lines of code.
 
 In fact, when you write a code block, you can indicate which language you are writing in so it will be displayed accordingly to the syntax.
 
@@ -287,7 +291,7 @@ for x in range(0, 3):
 
 # Git Configuration
 
-Configuring Git will help Github recognize your local machine every time you push/pull from it. It's important that this is one of the first things you do after you install Git on any machine.
+Configuring *Git* will help Github recognize your local machine every time you push or pull from it. It's important that this is one of the first things you do after you install Git on any machine.
 
 **git config**: configures your local machine to your Github account
 ```
@@ -308,7 +312,7 @@ Regardless, if you are creating a new or existing project, you need to create a 
 2. *Enter a title for the repository and add a description (optional, but helpful). Make sure you initialize with a README and .gitignore.*
 ![](git_img/initial2.png)
 <br><br>
-3. *README will be used as a documentation for the respository*
+3. *README will be used as a documentation for the respository.*
 ![](git_img/readme.png)                 
 ![](git_img/readme3.png)
 <br><br>
@@ -424,7 +428,7 @@ Make sure .gitignore is not called "gitignore" because it is important that the 
 
 2. *Use the Command Line's command:* **touch**
 
-Touch allows us to create new files. You only need to use **touch** if the file doesn't exist in the repository (visibility =/= existence.) Use **ls -a** to see if the files exist. If so, all you need to do is use **open .gitignore** and **open README.md**/open README.md to edit them.
+**Touch** allows us to create new files. You only need to use **touch** if the file doesn't exist in the repository (visibility =/= existence.) Use **ls -a** to see if the files exist. If so, all you need to do is use **open .gitignore** and **open README.md**/open README.md in the GUI to edit them.
 
 # Pushing Changes to Github 
 
@@ -474,7 +478,7 @@ $ CRPEs-MacBook-Air:Github_ex crpe$ git add ExampleR.R data
 <br><br>
 **git commit**: commits the changes you made and adds a message describing what you did
 
-It is important that the message you commit is concise and descriptive enough so that you and/or someone else can understand what changes were made to this version. Should look something like this if it was successful.
+It is important that the message you commit is concise and descriptive enough so that you and/or someone else can understand what changes were made to this version. It should look something like this if it was successful.
 ```
 $ CRPEs-MacBook-Air:Github_Ex crpe$ git commit -m "added R file and data folder"
 > [master 8e6be46] added R file and data folder and updated README
@@ -634,7 +638,7 @@ Let's say you worked from home one day and want to work on your home computer to
 
 Here are the main commands used to pull changes.
 
-**git fetch**: downloads any changes from the remote branch, updating your repository data, but leaving your local branch unchanged
+**git fetch**: downloads any changes from the remote branch, updates your repository data, but leaves your local branch unchanged
 ```
 $ CRPEs-MacBook-Air:Github_ex crpe$ git fetch
 > remote: Counting objects: 3, done.
@@ -645,7 +649,7 @@ From https://github.com/CRPE-UWB/Github_Ex
    473ca8a..082ced4  master     -> origin/master
 ```
 <br><br>
-**git pull origin master**: performs a fetch and additionally merge the changes into your local branch by overwriting everything on your local machine
+**git pull origin master**: performs a fetch and additionally merges the changes into your local branch by overwriting everything on your local machine
 
 This means you don't have to execute **git fetch**; however, you are free to do so before pulling if you want. 
 ```
@@ -717,13 +721,13 @@ Now, if you switch from one branch to the other, you will notice the changes are
 
 **In new_branch branch:**
 
-!["difference in files"](git_img/branch1.png)
-!["difference in R code"](git_img/branch1a.png)
+![](git_img/branch1.png)
+![](git_img/branch1a.png)
 
 **In master branch:**
 
-!["difference in files"](git_img/branch2.png)
-!["difference in R code"](git_img/branch2a.png)
+![](git_img/branch2.png)
+![](git_img/branch2a.png)
 <br><br>
 **git push origin**: pushes the branch to Github (like how you push changes using **git push origin master**)
 ```
@@ -787,7 +791,6 @@ To https://github.com/CRPE-UWB/Github_Ex.git
  - [deleted]         new_branch
 ```
 <br><br>
-
 Now you won't be able to see the branch, new_branch, on Github anymore.
 
 ### Merging Conflicts
@@ -797,11 +800,11 @@ Here is an example of two different versions of code in 2 different branches: ma
 
 **In master branch:**
 
-!["master branch"](git_img/conflict1.png)
+![](git_img/conflict1.png)
 
 **In conflict branch:**
 
-!["conflict branch"](git_img/conflict2.png)
+![](git_img/conflict2.png)
 
 Let's try merging conflict with master.
 ```
@@ -863,7 +866,7 @@ Once you fix your merge conflicts, add and commit the fixes and your branches sh
 
 ### Removing a File/Directory
 
-Let's say you pushed up a file/directory on accident which causes you to delete it locally and push your repository again. However, you may notice that the accidentally pushed file/directory still exists on Github. In order to get rid of it, use **git rm- file name**.
+Let's say you pushed up a file/directory on accident which causes you to delete it locally and push your repository again. However, you may notice that the accidentally pushed file/directory still exists on Github. In order to get rid of it, use **git rm -r file name**.
 
 ```
 $ CRPEs-MacBook-Air:Github_Ex crpe$ git rm -r exampleR.R
@@ -883,7 +886,9 @@ Compressing objects: 100% (2/2), done.
 
 ### Publishing a website to Github
 
-You may notice that some websites' have ".github.io" as part of their URL. This is because you can both host and publish websites for **FREE** on Github! (Mainly for static websites that are mainly informative ex personal website or informative website.) You need to make sure you have an HTML file in your directory however. You can create a HTML file in a text editor and publish whatever site you want. Or you can use other programs that create HTML files like RStudio's RMarkdown (which is how this website is built.) The website that is generated would be formatted like:
+You may notice that some websites' have ".github.io" as part of their URL. This is because you can both host and publish websites for **FREE** on Github! (Mainly for static websites that are mainly informative ex personal website or informative website.) You need to make sure you have an HTML file in your directory however. You can create a HTML file in a text editor and publish whatever site you want. Or you can use other programs that create HTML files like RStudio's RMarkdown (which is what I used to build this website.) It is important to note that your html file must be named "index.html" for it to be published properly.
+
+The website that is generated would be formatted like:
 
 name-of-user/github.io/name-of-repository 
 
@@ -901,6 +906,9 @@ $ CRPEs-MacBook-Air:Github_ex crpe$ git commit -m "added gh-pages"
 ```
 <br><br>
 2. Create a branch called **gh-pages**
+
+Make sure you don't have a README.md file in gh-pages because it might overwrite the html file. 
+
 ```
 $ CRPEs-MacBook-Air:Github_ex crpe$ git checkout -b gh-pages
 > Switched to a new branch 'gh-pages'
@@ -915,7 +923,7 @@ $ git push --all
 To https://github.com/kchaaa/Github-Guide.git
  * [new branch]      gh-pages -> gh-pages
 ```
-**Note:** while it does mention it is a branch, don't treat it as a normal branch. It's sole purpose is to help publish a website onto Github. Not to be merged.
+**Note:** While it does mention it is a branch, don't treat it as a normal branch. It's sole purpose is to help publish a website onto Github. Not to be merged.
 <br><br>
 
 Another simple way of doing so is naming your repository: "name-of-project.github.io" which tells Github the project will host a website automatically.
