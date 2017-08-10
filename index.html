@@ -318,6 +318,7 @@ $ CRPEs-MacBook-Air:Documents crpe$ cd new_directory
 <p>One of the greatest benefits of writing in <em>Markdown</em> is that you are able to insert code in your report/documentation. You can use back-ticks or ‘`’ to write in code.</p>
 <p>‘`’ or a single back-tick surrounding a word/words allows us to write one line of code.</p>
 <p>‘```’ or three back-ticks surrounding a word/words allows us to write multiple lines of code or a code block.</p>
+<p>Code Blocks aren’t limited to what your code looks like. You can also include visualizations (ex Tables, Graphs, Charts, Interactive Maps, etc.) that were a result of some lines of code.</p>
 <p>In fact, when you write a code block, you can indicate which language you are writing in so it will be displayed accordingly to the syntax.</p>
 <p>Example: Here’s what happens if you write {r} after ‘```’:</p>
 <pre class="r"><code>library(dplyr)
@@ -439,7 +440,7 @@ Branch master set up to track remote branch master from origin.</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><em>Use the Command Line’s command:</em> <strong>touch</strong></li>
 </ol>
-<p>Touch allows us to create new files. You only need to use <strong>touch</strong> if the file doesn’t exist in the repository (visibility =/= existence.) Use <strong>ls -a</strong> to see if the files exist. If so, all you need to do is use <strong>open .gitignore</strong> and <strong>open README.md</strong>/open README.md to edit them.</p>
+<p><strong>Touch</strong> allows us to create new files. You only need to use <strong>touch</strong> if the file doesn’t exist in the repository (visibility =/= existence.) Use <strong>ls -a</strong> to see if the files exist. If so, all you need to do is use <strong>open .gitignore</strong> and <strong>open README.md</strong>/open README.md in the GUI to edit them.</p>
 </div>
 </div>
 <div id="pushing-changes-to-github" class="section level1">
@@ -473,7 +474,7 @@ Changes not staged for commit:
 $ CRPEs-MacBook-Air:Github_ex crpe$ git add ExampleR.R data
 &gt; &quot;Adds only the R file and the directory called 'data'&quot;</code></pre>
 <p><br><br> <strong>git commit</strong>: commits the changes you made and adds a message describing what you did</p>
-<p>It is important that the message you commit is concise and descriptive enough so that you and/or someone else can understand what changes were made to this version. Should look something like this if it was successful.</p>
+<p>It is important that the message you commit is concise and descriptive enough so that you and/or someone else can understand what changes were made to this version. It should look something like this if it was successful.</p>
 <pre><code>$ CRPEs-MacBook-Air:Github_Ex crpe$ git commit -m &quot;added R file and data folder&quot;
 &gt; [master 8e6be46] added R file and data folder and updated README
  2 files changed, 27 insertions(+), 2 deletions(-)
@@ -603,7 +604,7 @@ Thumbs.db$</code></pre>
 <h3>Pulling from Github to Your Local Machine</h3>
 <p>Let’s say you worked from home one day and want to work on your home computer to work on your code. Then, you push your code back to Github to continue to work on your code once you get back to the office. However, you may notice that the code on your office computer is now outdated and you need to pull the changes from Github. Or you are collaboratively working on a project together and you need to retrieve the changes made by your partner to your local computer. Instead of deleting your current copy and re-cloning the repository to your computer, you can just pull the changes instead.</p>
 <p>Here are the main commands used to pull changes.</p>
-<p><strong>git fetch</strong>: downloads any changes from the remote branch, updating your repository data, but leaving your local branch unchanged</p>
+<p><strong>git fetch</strong>: downloads any changes from the remote branch, updates your repository data, but leaves your local branch unchanged</p>
 <pre><code>$ CRPEs-MacBook-Air:Github_ex crpe$ git fetch
 &gt; remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
@@ -611,7 +612,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From https://github.com/CRPE-UWB/Github_Ex
    473ca8a..082ced4  master     -&gt; origin/master</code></pre>
-<p><br><br> <strong>git pull origin master</strong>: performs a fetch and additionally merge the changes into your local branch by overwriting everything on your local machine</p>
+<p><br><br> <strong>git pull origin master</strong>: performs a fetch and additionally merges the changes into your local branch by overwriting everything on your local machine</p>
 <p>This means you don’t have to execute <strong>git fetch</strong>; however, you are free to do so before pulling if you want.</p>
 <pre><code>$ CRPEs-MacBook-Air:Github_ex crpe$ git pull origin master
 &gt; remote: Counting objects: 3, done.
@@ -700,8 +701,7 @@ Fast-forward
 CRPEs-MacBook-Air:Github_Ex crpe$ git push origin :new_branch
 To https://github.com/CRPE-UWB/Github_Ex.git
  - [deleted]         new_branch</code></pre>
-<p><br><br></p>
-<p>Now you won’t be able to see the branch, new_branch, on Github anymore.</p>
+<p><br><br> Now you won’t be able to see the branch, new_branch, on Github anymore.</p>
 </div>
 <div id="merging-conflicts" class="section level3">
 <h3>Merging Conflicts</h3>
@@ -755,7 +755,7 @@ Unmerged paths:
 <h1>Additional Features</h1>
 <div id="removing-a-filedirectory" class="section level3">
 <h3>Removing a File/Directory</h3>
-<p>Let’s say you pushed up a file/directory on accident which causes you to delete it locally and push your repository again. However, you may notice that the accidentally pushed file/directory still exists on Github. In order to get rid of it, use <strong>git rm- file name</strong>.</p>
+<p>Let’s say you pushed up a file/directory on accident which causes you to delete it locally and push your repository again. However, you may notice that the accidentally pushed file/directory still exists on Github. In order to get rid of it, use <strong>git rm -r file name</strong>.</p>
 <pre><code>$ CRPEs-MacBook-Air:Github_Ex crpe$ git rm -r exampleR.R
 &gt; rm 'exampleR.R'
 
@@ -772,7 +772,8 @@ Compressing objects: 100% (2/2), done.</code></pre>
 </div>
 <div id="publishing-a-website-to-github" class="section level3">
 <h3>Publishing a website to Github</h3>
-<p>You may notice that some websites’ have “.github.io” as part of their URL. This is because you can both host and publish websites for <strong>FREE</strong> on Github! (Mainly for static websites that are mainly informative ex personal website or informative website.) You need to make sure you have an HTML file in your directory however. You can create a HTML file in a text editor and publish whatever site you want. Or you can use other programs that create HTML files like RStudio’s RMarkdown (which is how this website is built.) The website that is generated would be formatted like:</p>
+<p>You may notice that some websites’ have “.github.io” as part of their URL. This is because you can both host and publish websites for <strong>FREE</strong> on Github! (Mainly for static websites that are mainly informative ex personal website or informative website.) You need to make sure you have an HTML file in your directory however. You can create a HTML file in a text editor and publish whatever site you want. Or you can use other programs that create HTML files like RStudio’s RMarkdown (which is what I used to build this website.) It is important to note that your html file must be named “index.html” for it to be published properly.</p>
+<p>The website that is generated would be formatted like:</p>
 <p>name-of-user/github.io/name-of-repository</p>
 <p>You can easily do so in 3 easy steps:</p>
 <ol style="list-style-type: decimal">
@@ -785,6 +786,7 @@ $ CRPEs-MacBook-Air:Github_ex crpe$ git commit -m &quot;added gh-pages&quot;
  28 files changed, 887 insertions(+)
  ...</code></pre>
 <p><br><br> 2. Create a branch called <strong>gh-pages</strong></p>
+<p>Make sure you don’t have a README.md file in gh-pages because it might overwrite the html file.</p>
 <pre><code>$ CRPEs-MacBook-Air:Github_ex crpe$ git checkout -b gh-pages
 &gt; Switched to a new branch 'gh-pages'</code></pre>
 <p><br><br> 3. Push the changes to Github</p>
@@ -793,7 +795,7 @@ $ CRPEs-MacBook-Air:Github_ex crpe$ git commit -m &quot;added gh-pages&quot;
 &gt; Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/kchaaa/Github-Guide.git
  * [new branch]      gh-pages -&gt; gh-pages</code></pre>
-<p><strong>Note:</strong> while it does mention it is a branch, don’t treat it as a normal branch. It’s sole purpose is to help publish a website onto Github. Not to be merged. <br><br></p>
+<p><strong>Note:</strong> While it does mention it is a branch, don’t treat it as a normal branch. It’s sole purpose is to help publish a website onto Github. Not to be merged. <br><br></p>
 <p>Another simple way of doing so is naming your repository: “name-of-project.github.io” which tells Github the project will host a website automatically.</p>
 </div>
 </div>
